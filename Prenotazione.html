@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenota un tavolo al Ristorante Example in pochi click.">
+    <title>Prenotazione</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="bx-sw-2">
+        <a href="index.html"><img src="logo.png" alt="logo sito test" class = "logo"></a>
+        <ul class="main-menu">
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="prenotazione.html">Richiedi tavolo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </header>
+
+    <!-- FORM PRENOTAZIONE -->
+    <main>
+        <h1>Compila il modulo per richiedere un tavolo</h1>
+        <form id="prenotazione-form" class="bx-sw-1">
+            <label for="nome"><b>Nome tavolo:</b></label>
+            <input type="text" id="nome" class = "box" required>
+
+            <label for="data"><b>Data:</b></label>
+            <input type="date" id="data" class = "box" required>
+
+            <label for="ora"><b>Ora:</b></label>
+            <input type="time" id="ora" class = "box" required>
+            <div class="button-container">
+                <button class = "aggiungi" type="submit">Prenota su WhatsApp</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Grazie per aver scelto il nostro ristorante!</p>
+        <section id="footer-info">
+            <p><a href="https://wa.me/3319932488"><i class="fusion-li-icon fa-mobile-alt fas"></i> +39 3319932488</a> | <a href="mailto:info@ristorante.com"><i class="fas fa-envelope"></i> info@ristorante.com</a></p>
+            <p>&copy; 2025 Example | Tutti i diritti riservati</p>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById("prenotazione-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Prendi i dati dal form
+            let nome = document.getElementById("nome").value;
+            let data = document.getElementById("data").value;
+            let ora = document.getElementById("ora").value;
+
+            // Numero WhatsApp
+            let numeroWhatsApp = "3319932488";
+
+            // Testo del messaggio da inviare su WhatsApp
+            let messaggio = `Ciao, vorrei prenotare un tavolo a nome di ${nome} per il giorno ${data} alle ore ${ora}. Grazie!`;
+
+            // Crea il link di WhatsApp
+            let urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(messaggio)}`;
+
+            // Apri WhatsApp
+            window.open(urlWhatsApp, "_blank");
+        });
+    </script>
+
+</body>
+</html>

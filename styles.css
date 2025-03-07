@@ -1,0 +1,184 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Imposta il body e html per occupare tutta la pagina */
+  html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(rgba(157, 157, 157, 0.618), rgba(255, 255, 255, 0.841)),  
+                url('sfondo.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+  }
+
+  /* Il main si espande per riempire lo spazio tra header e footer */
+  main { flex-grow: 1; }
+  
+  header {
+    margin: 2%;
+    border-radius: 15px;
+    background: linear-gradient(#880707b6, #410505b5);
+    border-bottom: 15px solid #290101;
+    text-align: center;
+    padding: 10px 15px;
+    backdrop-filter: blur(4px); /* Effetto sfocatura sullo sfondo */
+    -webkit-backdrop-filter: blur(4px); /* Compatibilità Safari */
+  }
+
+  .logo{
+    height: 100px;
+    width: 180px;
+  }
+
+  .main-menu li{ display: inline-block; margin: 15px; }
+  
+  #menu {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  #menu ul { list-style: none; margin-bottom: 20px; }
+  #menu li {
+    align-items: center;
+    justify-content: space-between;
+    border-top: 5px;
+    border-bottom: 1px solid #b8aaaa;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  #menu li span { font-weight: bold; }
+
+  #prenotazione-form{ 
+    color : rgba(0, 0, 0, 0.676); 
+    width: 98%; 
+    max-width: 400px;
+    margin: 40px auto 70px;
+    backdrop-filter: blur(2px); /* Effetto sfocatura sullo sfondo */
+    -webkit-backdrop-filter: blur(2px); /* Compatibilità Safari */
+  }
+
+  a{ text-decoration: none; color: rgb(214, 213, 213); }
+  a:hover{ color: #989292; transition: all 0.3s ease;}
+
+  h1, h2 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0;
+    color: #000000;
+    text-size-adjust: auto;
+  }
+
+  button{ margin-top: 5px; }
+
+  form{ 
+    background-color: rgba(167, 158, 158, 0.631); 
+    border-radius: 10px; 
+    padding: 10px; 
+    font-weight: 400; 
+    text-align: left; 
+  }
+
+  .box{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.143);
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+  }
+  .aggiungi {
+    padding: 8px 15px;
+    top: 10px;
+    background: linear-gradient(#880707b6, #410505b5);
+    color: rgb(217, 216, 216);
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.378); /* Ombra base */
+    transition: all 0.5s ease;
+  }
+  .aggiungi:hover { background-color: #6b111175; box-shadow: 0 2px 4px rgba(143, 14, 14, 0.523); }
+
+  .grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 0px;
+    height: 100%;
+  }
+  .col_33{
+    margin: 2%;
+    width: 29.33%;
+    padding: 15px;
+    color: #000;
+    background: rgba(167, 158, 158, 0.631);
+    border-radius: 10px;
+    backdrop-filter: blur(2px); /* Effetto sfocatura sullo sfondo */
+    -webkit-backdrop-filter: blur(2px); /* Compatibilità Safari */
+    text-align: left;
+  }
+  .col_33 ul{
+    list-style: none;
+  }
+  .col_33 li{
+    margin-bottom: 15px;
+  }
+  .col_33 table{
+    border-spacing: 0 11px;
+    margin: 0 auto;
+  }
+  .col_33 td{
+    text-align: left;
+    padding-right: 10px;
+  }
+  .col_33 a{
+    color: #000;
+  }
+  .col_33 a:hover{
+    color: #601010;
+  }
+
+  @media (max-width: 984px) {
+    .grid-container{
+      padding: 15px 0px;
+    }
+    .col_33{
+      width: 100%;
+      margin: 15px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    #prenotazione-form{ 
+      max-width: 600px;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #333333d2;
+    color: white;
+  }
+
+  #footer-info p{ padding-top: 10px; color: #a7a7a7; }
+
+  /* general tips*/
+
+  .bx-sw-1{ box-shadow: 0px 6px 10px #00000030; } 
+  .bx-sw-2{ box-shadow: 0px 6px 10px #00000083; }
